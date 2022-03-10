@@ -11,17 +11,21 @@ Función que recibe 3 parámetros (a, b y c),
 y en c almacena el valor de la suma de a más b.
 */
 
-void suma(int a, int b, int * c) {
-    
+void suma(int a, int b, int * c) 
+{
+    *c = a + b;
+}
 
 /*
 Esta función suma los N primeros números del arreglo a
 */
-int sumaN(int a[], int N) {
+int sumaN(int a[], int N) 
+{
     int i;
     int tot = 0;
 
-    for(i = 0; i < N; i++) {
+    for(i = 0; i < N; i++) 
+    {
       tot += a[i];
     }
 
@@ -35,8 +39,16 @@ arreglo a y almacena el resultado en *suma.
 Utilice la función sumaN.
 */
 
-void sumaNultimos(int a[], int n, int m, int * suma) {
+void sumaNultimos(int a[], int n, int m, int * suma) 
+{
+    *suma = 0;
 
+    for(int i = m ; i < n ; i = i + 1)
+    {
+       *suma = *suma + a[i];
+    }
+    
+    return suma;
 }
 
 /*
@@ -53,7 +65,8 @@ typedef struct {
 } Persona;
 
 
-Persona* crearPersona(char nombre[], char rut[], int edad) {
+Persona* crearPersona(char nombre[], char rut[], int edad) 
+{
    return NULL;
 }
 
@@ -70,7 +83,9 @@ typedef struct {
    int capacidad; // capacidad del arreglo
 } Vector;
 
-Vector * crearVector(int n) {
+Vector * crearVector(int n) 
+{
+    
    return NULL;
 }
 

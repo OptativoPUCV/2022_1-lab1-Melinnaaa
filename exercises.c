@@ -11,7 +11,7 @@ Función que recibe 3 parámetros (a, b y c),
 y en c almacena el valor de la suma de a más b.
 */
 
-void suma(int a, int b, int * c) 
+void suma(int a, int b, int* c) 
 {
     *c = a + b;
 }
@@ -41,14 +41,13 @@ Utilice la función sumaN.
 
 void sumaNultimos(int a[], int n, int m, int * suma) 
 {
-    *suma = 0;
-
-    for(int i = m ; i < n ; i = i + 1)
-    {
-       *suma = *suma + a[i];
-    }
-    
-    return suma;
+   int sumaHastaN = 0;
+   int sumaTotal = 0;
+   int resto = n - m;
+   *suma = 0;
+   sumaTotal = suma(a, n);
+   sumaHastaM = suma(a, resto);
+   *suma = sumaTotal - sumaHastaM;
 }
 
 /*
@@ -58,7 +57,8 @@ crearPersona(...), la cual crea una nueva persona con
 los datos correspondientes y retorna un puntero al dato 
 recién creado.
 */
-typedef struct {
+typedef struct 
+{
   char nombre[30];
   char rut[11];
   int edad;
@@ -85,7 +85,6 @@ typedef struct {
 
 Vector * crearVector(int n) 
 {
-    
    return NULL;
 }
 

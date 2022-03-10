@@ -81,7 +81,7 @@ typedef struct {
 Vector* crearVector(int n) 
 {
    Vector* arreglo = (Vector*) calloc (n, sizeof(Vector));
-   *arreglo->datos = (int*) calloc (n, sizeof(int));
+   arreglo->datos = (int*) calloc (n, sizeof(int));
    arreglo->capacidad = n;
    return arreglo;
 }
@@ -103,7 +103,9 @@ la cual retorna el valor en la posición i del vector v.
 */
 int obtenerValor(Vector * v, int i) 
 {
-   return 0;
+   int valor;
+   valor = v->datos[i];
+   return valor;
 }
 
 /*

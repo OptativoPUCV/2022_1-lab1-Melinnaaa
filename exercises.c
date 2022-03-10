@@ -101,7 +101,7 @@ Ejercicio 6.
 Programe la función int obtenerValor(Vector * v, int i), 
 la cual retorna el valor en la posición i del vector v.
 */
-int obtenerValor(Vector * v, int i) 
+int obtenerValor(Vector* v, int i) 
 {
    int valor;
    valor = v->datos[i];
@@ -115,7 +115,12 @@ actualiza el vector `c` con el resultado de la suma.
 */
 void sumaV(Vector * a, Vector * b, Vector * c) 
 {
+   int largo = sizeof(a) / sizeof(a[1]);
 
+   for (int i = 0 ; i < largo ; i = i + 1)
+   {
+      c->datos[i] = a->datos[i] + b->datos[i];
+   }
 }
 
 /*

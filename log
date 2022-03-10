@@ -1,1 +1,50 @@
 
+Thu Mar 10 17:10:00 HSP 2022: 
+In file included from test.c:5:
+exercises.c: In function 'sumaNultimos':
+exercises.c:48:16: error: called object 'suma' is not a function or function pointer
+    sumaTotal = suma(a, n);
+                ^~~~
+exercises.c:42:48: note: declared here
+ void sumaNultimos(int a[], int n, int m, int * suma)
+                                          ~~~~~~^~~~
+exercises.c:49:4: error: 'sumaHastaM' undeclared (first use in this function); did you mean 'sumaHastaN'?
+    sumaHastaM = suma(a, resto);
+    ^~~~~~~~~~
+    sumaHastaN
+exercises.c:49:4: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:49:17: error: called object 'suma' is not a function or function pointer
+    sumaHastaM = suma(a, resto);
+                 ^~~~
+exercises.c:42:48: note: declared here
+ void sumaNultimos(int a[], int n, int m, int * suma)
+                                          ~~~~~~^~~~
+exercises.c:44:8: error: unused variable 'sumaHastaN' [-Werror=unused-variable]
+    int sumaHastaN = 0;
+        ^~~~~~~~~~
+test.c: At top level:
+test.c:8:8: error: '_strdup' redeclared without dllimport attribute: previous dllimport ignored [-Werror=attributes]
+ char * _strdup(const char * str) {
+        ^~~~~~~
+test.c: In function 'test_suma_n':
+test.c:88:17: error: passing argument 1 to restrict-qualified parameter aliases with argument 3 [-Werror=restrict]
+         sprintf(msg,"%s %d,",msg,a[i]);
+                 ^~~          ~~~
+test.c:90:13: error: passing argument 1 to restrict-qualified parameter aliases with argument 3 [-Werror=restrict]
+     sprintf(msg,"%s]",msg);
+             ^~~       ~~~
+test.c:90:21: error: 'sprintf' may write a terminating nul past the end of the destination [-Werror=format-overflow=]
+     sprintf(msg,"%s]",msg);
+                     ^
+test.c:90:5: note: 'sprintf' output between 2 and 301 bytes into a destination of size 300
+     sprintf(msg,"%s]",msg);
+     ^~~~~~~~~~~~~~~~~~~~~~
+test.c:88:25: error: '%d' directive writing between 1 and 11 bytes into a region of size between 0 and 299 [-Werror=format-overflow=]
+         sprintf(msg,"%s %d,",msg,a[i]);
+                         ^~
+test.c:88:9: note: 'sprintf' output between 4 and 313 bytes into a destination of size 300
+         sprintf(msg,"%s %d,",msg,a[i]);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+fa257cd

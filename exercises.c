@@ -63,6 +63,7 @@ typedef struct
 Persona* crearPersona(char nombre[], char rut[], int edad) 
 {
    Persona* datos;
+   datos = (Persona*) calloc (1, sizeof(Persona));
    strcpy(datos->nombre, nombre);
    strcpy(datos->rut, rut);
    datos->edad = edad;
@@ -119,6 +120,7 @@ actualiza el vector `c` con el resultado de la suma.
 */
 void sumaV(Vector * a, Vector * b, Vector * c) 
 {
+
    for (int i = 0 ; i < a->capacidad ; i = i + 1)
    {
       c->datos[i] = a->datos[i] + b->datos[i];
